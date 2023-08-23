@@ -1,50 +1,3 @@
-FILE package.json chính của tool phải thêm đoạn : 
-`
-"type": "module",
-`
-
-
-Phiên bản mới cần sửa :
-
-```js
-async start() {
-  if (this.is_remote) {
-    return this.startRemote();
-  }
-
-  if (!this.executablePath) {
-    await this.checkBrowser();
-  }
-
-  const ORBITA_BROWSER = this.executablePath || this.browserChecker.getOrbitaPath;
-
-  const orbitaBrowserExists = await access(ORBITA_BROWSER).then(() => true).catch(() => false);
-  if (!orbitaBrowserExists) {
-    throw new Error(`Orbita browser is not exists on path ${ORBITA_BROWSER}, check executablePath param`);
-  }
-
-  await this.createStartup();
-  // await this.createBrowserExtension();
-
-
-
-  // const wsUrl = await this.spawnBrowser();
-
-
-
-  
-  this.setActive(true);
-
-  // return { status: 'success', wsUrl };
-  return { status: 'success' };
-}
-```
-```js
-const wsUrl = await this.spawnBrowser();
-```
-
-
-```js
 import Gologin from 'tdgologin';
 
 class Glogin {
@@ -146,7 +99,3 @@ const gloginInstance = new Glogin(apiKey, pathProfiles);
     const profileId = await gloginInstance.newProfile(os, profileName, userAgent);
     await gloginInstance.downloadProfile(profileId);
 })();
-```
-
-
-

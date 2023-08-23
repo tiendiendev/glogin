@@ -1,17 +1,17 @@
 {
-  "name": "glogin",
-  "version": "1.0.0",
-  "description": "A high-level API to control Orbita browser over GoLogin API",
+  "name": "tdgologin",
+  "version": "2.0.1",
+  "description": "Bản mod gologin cho goloin",
   "main": "./src/gologin.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gologinapp/gologin.git"
+    "url": "git+https://github.com/tiendiendev/glogin.git"
   },
   "engines": {
     "node": ">=14.0.0"
   },
   "type": "module",
-  "author": "The GoLogin Authors",
+  "author": "The TDev Authors",
   "license": "GPL-3.0",
   "dependencies": {
     "archiver": "^3.1.1",
@@ -30,9 +30,9 @@
     "sqlite3": "^5.0.2"
   },
   "bugs": {
-    "url": "https://github.com/gologinapp/gologin/issues"
+    "url": "https://github.com/tiendiendev/glogin/issues"
   },
-  "homepage": "https://github.com/gologinapp/gologin#readme",
+  "homepage": "https://github.com/tiendiendev/glogin#readme",
   "directories": {
     "example": "examples"
   },
